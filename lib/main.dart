@@ -1,4 +1,4 @@
-import 'package:doggos_tpv/screens/orders.dart';
+import 'package:doggos_tpv/screens/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,6 +10,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold(body: OrdersScreen()));
+    return MaterialApp(home: Scaffold(body: LoginScreen()));
   }
 }
