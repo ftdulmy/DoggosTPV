@@ -92,7 +92,6 @@ class OrderList extends StatelessWidget {
 
                       return LongPressDraggable<Order>(
                         data: order,
-                        maxSimultaneousDrags: 1,
                         feedback: Material(
                           color: Colors.transparent,
                           child: OrderItem(order: order),
