@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -9,11 +8,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final TextEditingController usuarioController =
-      TextEditingController();
+  final TextEditingController usuarioController = TextEditingController();
 
-  final TextEditingController passwordController =
-      TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   bool ocultarPassword = true;
 
@@ -33,19 +30,14 @@ class _LoginScreenState extends State<LoginScreen> {
 
     if (usuario.isEmpty || password.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Ingresa tu usuario y contraseña'),
-        ),
+        const SnackBar(content: Text('Ingresa tu usuario y contraseña')),
       );
       return;
     }
 
     // Aquí puedes agregar la lógica de autenticación.
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Iniciando sesión...'),
-      ),
-    );
+    ScaffoldMessenger.of(context)
+        .showSnackBar(const SnackBar(content: Text('Iniciando sesión...')));
   }
 
   @override
@@ -63,14 +55,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: constraints.maxHeight * 0.95,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    border: Border.all(
-                      color: Colors.blueGrey,
-                      width: 1,
-                    ),
+                    border: Border.all(color: Colors.blueGrey, width: 1),
                   ),
                   child: Column(
                     children: [
-
                       // Barra superior
                       Container(
                         height: 22,
@@ -81,14 +69,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       // Contenido principal
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 26,
-                          ),
+                          padding: const EdgeInsets.symmetric(horizontal: 26),
                           child: Column(
-                            mainAxisAlignment:
-                                MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-
                               // Logo de la aplicación
                               const Text(
                                 'LOGO DE LA\nAPP',
@@ -111,22 +95,19 @@ class _LoginScreenState extends State<LoginScreen> {
                                     fontSize: 12,
                                     color: Colors.blueGrey,
                                   ),
-                                  contentPadding:
-                                      const EdgeInsets.symmetric(
+                                  contentPadding: const EdgeInsets.symmetric(
                                     horizontal: 9,
                                     vertical: 12,
                                   ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.circular(6),
+                                    borderRadius: BorderRadius.circular(6),
                                     borderSide: BorderSide(
                                       color: naranja,
                                       width: 1,
                                     ),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.circular(6),
+                                    borderRadius: BorderRadius.circular(6),
                                     borderSide: BorderSide(
                                       color: naranja,
                                       width: 1.5,
@@ -147,22 +128,19 @@ class _LoginScreenState extends State<LoginScreen> {
                                     fontSize: 12,
                                     color: Colors.blueGrey,
                                   ),
-                                  contentPadding:
-                                      const EdgeInsets.symmetric(
+                                  contentPadding: const EdgeInsets.symmetric(
                                     horizontal: 9,
                                     vertical: 12,
                                   ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.circular(6),
+                                    borderRadius: BorderRadius.circular(6),
                                     borderSide: BorderSide(
                                       color: naranja,
                                       width: 1,
                                     ),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.circular(6),
+                                    borderRadius: BorderRadius.circular(6),
                                     borderSide: BorderSide(
                                       color: naranja,
                                       width: 1.5,
@@ -184,8 +162,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     foregroundColor: Colors.white,
                                     elevation: 0,
                                     shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(25),
+                                      borderRadius: BorderRadius.circular(25),
                                     ),
                                   ),
                                   child: const Text(
@@ -232,11 +209,7 @@ class FondoPunteado extends CustomPainter {
 
     for (double x = 4; x < size.width; x += separacion) {
       for (double y = 4; y < size.height; y += separacion) {
-        canvas.drawCircle(
-          Offset(x, y),
-          1.2,
-          paint,
-        );
+        canvas.drawCircle(Offset(x, y), 1.2, paint);
       }
     }
   }
