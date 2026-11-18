@@ -54,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               // Logo de la aplicación
               const Text(
-                'LOGO DE LA\nAPP',
+                'DOGOS TPV',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 21,
