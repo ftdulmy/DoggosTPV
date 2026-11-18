@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:doggos_tpv/screens/orders.dart';
+import 'package:doggos_tpv/screens/products.dart';
+import 'package:doggos_tpv/screens/create_orders.dart';
 
 class BottomNavigatorBar extends StatefulWidget {
   const BottomNavigatorBar({super.key});
@@ -32,22 +35,16 @@ class _BottomNavigatorBarState extends State<BottomNavigatorBar> {
   // );
 
   late final List<Widget> screens = [
-    // Aquí se deben de poner las pantallas que se van a mostrar en el BottomNavigationBar
-    // ProductsScreen(
-    //   productsService: _productsService,
-    //   productByIdService: _productByIdService,
-    // ),
-    // ShopingCartScreen(
-    //   shoppingCartsService: _shoppingCartsService,
-    //   cartService: _shoppingCartService,
-    //   userService: _userByIdService,
-    // ),
+    OrdersScreen(),
+    ProductsScreen(),
+    CreateOrdersScreen(),
   ];
 
   final List<BottomNavigationBarItem> items = const [
     // Estos son los icons que aparecen en el bottom navigation bar
-    BottomNavigationBarItem(icon: Icon(Icons.store), label: 'Productos'),
-    BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Carrito'),
+    BottomNavigationBarItem(icon: Icon(Icons.dining), label: 'Ordenes'),
+    BottomNavigationBarItem(icon: Icon(Icons.add_circle), label: 'Crear Orden'),
+    BottomNavigationBarItem(icon: Icon(Icons.egg), label: 'Productos'),
   ];
 
   @override
